@@ -1,0 +1,57 @@
+[
+{
+	"uri": "https://rackax.github.io/fedora/fedora-first-things-to-do/",
+	"title": "Fedora First Things to Do",
+	"tags": [],
+	"description": "",
+	"content": "Updated: 4-18-2020\nCommands to Run After Install 1. Update Fedora $ sudo dnf update \u0026amp;\u0026amp; sudo dnf distro-sync -y \u0026amp;\u0026amp; sync \u0026amp;\u0026amp; sudo dnf autoremove Reboot System -Autoremove Fix\n Removes the initially-installed kernel in order to fix dnf autoremove This will vary depending on the Fedora image version used Find original Kernal Installed sudo dnf list --installed 'kernel'* sudo dnf remove *5.3.7* \u0026amp;\u0026amp; sync  2. Change Hostname $ hostnamectl status # view current hostname $ hostnamectl set-hostname --static \u0026quot;deathstar\u0026quot; # set up new hostname 3. Install RPM fusion repository and get most recent update $ sudo dnf update --refresh $ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm $ sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 4. Install Video Players and Codecs $ sudo dnf install youtube-dl vlc -y $ sudo dnf install \\ gstreamer-plugins-base \\ gstreamer1-plugins-base \\ gstreamer-plugins-bad \\ gstreamer-plugins-ugly \\ gstreamer1-plugins-ugly \\ gstreamer-plugins-good-extras \\ gstreamer1-plugins-good \\ gstreamer1-plugins-good-extras \\ gstreamer1-plugins-bad-freeworld \\ ffmpeg \\ mpv \\ gstreamer-ffmpeg 5. Themes $ do dnf install numix-gtk-theme $ do dnf install paper-icon-theme-1.5.0-4.fc31.noarch 6. Gnome Plugins $ sudo dnf install gnome-tweak-tool  https://extensions.gnome.org/extension/1160/dash-to-panel/ https://extensions.gnome.org/extension/1112/screenshot-tool/ https://extensions.gnome.org/extension/1503/tray-icons/ https://extensions.gnome.org/extension/517/caffeine/ https://extensions.gnome.org/extension/277/impatience/ https://extensions.gnome.org/extension/104/netspeed/ https://extensions.gnome.org/extension/1034/services-systemd/  $ sudo dnf install menulibre  Disable Wayland  cat '/etc/gdm/custom.conf' | grep '#WaylandEnable' \u0026gt; '/dev/null' \u0026amp;\u0026amp; sudo sed -i 's/'#WaylandEnable'/'WaylandEnable'/g' '/etc/gdm/custom.conf' \u0026amp;\u0026amp; cat '/etc/gdm/custom.conf' | grep 'WaylandEnable' 7. Misc Apps $ sudo dnf install unzip p7zip p7zip-plugins wget  Fedy Install  # RPM Fusion sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm # Install fedy copr repository sudo dnf copr enable kwizart/fedy # Install fedy sudo dnf install fedy -y  Nano Install and updates env variables  sudo dnf install 'nano' -y \u0026amp;\u0026amp; export 'VISUAL=nano' \u0026amp;\u0026amp; export 'EDITOR=nano' \u0026amp;\u0026amp; echo -e 'export VISUAL=nano\\nexport EDITOR=nano' | sudo tee '/etc/profile.d/editor-nano.sh' \u0026gt; '/dev/null' \u0026amp;\u0026amp; cat '/etc/profile.d/editor-nano.sh' \u0026amp;\u0026amp; mkdir -p ~/'.config/nano' \u0026amp;\u0026amp; echo 'set nowrap' | tee ~/'.config/nano/nanorc' \u0026gt; '/dev/null' \u0026amp;\u0026amp; cat ~/'.config/nano/nanorc'  Git Tools  sudo dnf install git-cola 8. Mozilla Firefox Settings  Enable hardware Acceleration  echo -e 'export MOZ_ACCELERATED=1\\nexport MOZ_WEBRENDER=1\\nexport MOZ_USE_XINPUT2=1' | sudo tee '/etc/profile.d/firefox-hwaccel.sh' \u0026gt; '/dev/null' \u0026amp;\u0026amp; cat '/etc/profile.d/firefox-hwaccel.sh' Sites Information was Pulled From  https://wiki.realmofespionage.xyz/distros:fedora_workstation_gnome https://ytdl-org.github.io/youtube-dl/download.html https://www.fossmint.com/best-linux-icon-themes/ https://github.com/rpmfusion-infra/fedy  "
+},
+{
+	"uri": "https://rackax.github.io/fedora/",
+	"title": "Fedoras",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://rackax.github.io/unraid/radarr-sonarr/",
+	"title": "Radarr Sonarr",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://rackax.github.io/unraid/",
+	"title": "Unraids",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://rackax.github.io/unraid/dockers/",
+	"title": "Dockers",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://rackax.github.io/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Main Page Information for Site about notes of systems I have set up.\n"
+},
+{
+	"uri": "https://rackax.github.io/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://rackax.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
