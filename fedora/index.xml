@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fedoras on Rackax Github.io</title>
-    <link>http://example.org/fedora/</link>
+    <link>https://rackax.github.io/fedora/</link>
     <description>Recent content in Fedoras on Rackax Github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 18 Apr 2020 22:49:33 -0600</lastBuildDate>
     
-	<atom:link href="http://example.org/fedora/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rackax.github.io/fedora/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fedora First Things to Do</title>
-      <link>http://example.org/fedora/fedora-first-things-to-do/</link>
+      <link>https://rackax.github.io/fedora/fedora-first-things-to-do/</link>
       <pubDate>Sat, 18 Apr 2020 22:49:33 -0600</pubDate>
       
-      <guid>http://example.org/fedora/fedora-first-things-to-do/</guid>
+      <guid>https://rackax.github.io/fedora/fedora-first-things-to-do/</guid>
       <description>Updated: 4-18-2020
 Commands to Run After Install 1. Update Fedora $ sudo dnf update &amp;amp;&amp;amp; sudo dnf distro-sync -y &amp;amp;&amp;amp; sync &amp;amp;&amp;amp; sudo dnf autoremove Reboot System -Autoremove Fix
  Removes the initially-installed kernel in order to fix dnf autoremove This will vary depending on the Fedora image version used Find original Kernal Installed sudo dnf list --installed &#39;kernel&#39;* sudo dnf remove *5.3.7* &amp;amp;&amp;amp; sync  2. Change Hostname $ hostnamectl status # view current hostname $ hostnamectl set-hostname --static &amp;quot;deathstar&amp;quot; # set up new hostname 3.</description>

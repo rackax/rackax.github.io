@@ -3,41 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/fedora/fedora-first-things-to-do/</loc>
+    <loc>https://rackax.github.io/fedora/fedora-first-things-to-do/</loc>
     <lastmod>2020-04-18T22:49:33-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/fedora/</loc>
+    <loc>https://rackax.github.io/fedora/</loc>
     <lastmod>2020-04-18T22:49:33-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/unraid/radarr-sonarr/</loc>
+    <loc>https://rackax.github.io/unraid/radarr-sonarr/</loc>
     <lastmod>2020-04-18T22:48:20-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/unraid/</loc>
+    <loc>https://rackax.github.io/unraid/</loc>
     <lastmod>2020-04-18T22:48:20-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/unraid/dockers/</loc>
+    <loc>https://rackax.github.io/unraid/dockers/</loc>
     <lastmod>2020-04-18T22:47:32-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://rackax.github.io/</loc>
     <lastmod>2020-04-18T22:45:21-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://rackax.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://rackax.github.io/tags/</loc>
   </url>
   
 </urlset>
