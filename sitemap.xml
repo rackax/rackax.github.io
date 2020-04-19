@@ -33,16 +33,6 @@
   </url>
   
   <url>
-    <loc>http://example.org/posts/my-first-post/</loc>
-    <lastmod>2020-04-18T22:32:12-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://example.org/posts/</loc>
-    <lastmod>2020-04-18T22:32:12-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://example.org/categories/</loc>
   </url>
   
