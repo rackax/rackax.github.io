@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title> :: Rackax Github.io</title>
+    <title>Fedora First Things to Do :: Rackax Github.io</title>
 
     
     <link href="/css/nucleus.css?1587272399" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/fedora/fedora-first-things-to-do/">
     <nav id="sidebar" class="">
 
 
@@ -95,7 +95,7 @@
   
     
     <li data-nav-id="/fedora/" title="Fedoras" class="dd-item 
-        
+        parent
         
         
         ">
@@ -121,7 +121,7 @@
  
   
     
-      <li data-nav-id="/fedora/fedora-first-things-to-do/" title="Fedora First Things to Do" class="dd-item ">
+      <li data-nav-id="/fedora/fedora-first-things-to-do/" title="Fedora First Things to Do" class="dd-item active">
         <a href="/fedora/fedora-first-things-to-do/">
         Fedora First Things to Do
         
@@ -293,24 +293,171 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/fedora/'>Fedoras</a> > Fedora First Things to Do
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#commands-to-run-after-install">Commands to Run After Install</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Fedora First Things to Do
+            </h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
- 
-<h1 id="main-page">Main Page</h1>
-<p>Information for Site about notes of systems I have set up.</p>
+<h1 id="fedora-install">Fedora Install</h1>
+<p>Updated: 4-18-2020</p>
+<h3 id="commands-to-run-after-install">Commands to Run After Install</h3>
+<h4 id="1-update-fedora">1. Update Fedora</h4>
+<pre><code>$ sudo dnf update &amp;&amp; sudo dnf distro-sync -y &amp;&amp; sync &amp;&amp; sudo dnf autoremove
+</code></pre><p><strong>Reboot System</strong>
+-Autoremove Fix</p>
+<ul>
+<li>Removes the initially-installed kernel in order to fix <code>dnf autoremove</code></li>
+<li>This will vary depending on the Fedora image version used</li>
+<li>Find original Kernal Installed</li>
+<li><code>sudo dnf list --installed 'kernel'*</code></li>
+<li><code>sudo dnf remove *5.3.7* &amp;&amp; sync</code></li>
+</ul>
+<h4 id="2-change-hostname">2. Change Hostname</h4>
+<pre><code>$ hostnamectl status # view current hostname
+$ hostnamectl set-hostname --static &quot;deathstar&quot; # set up new hostname
+</code></pre><h4 id="3-install-rpm-fusion-repository-and-get-most-recent-update">3. Install RPM fusion repository and get most recent update</h4>
+<pre><code>$ sudo dnf update --refresh
+$ sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+$ sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+</code></pre><h4 id="4-install-video-players-and-codecs">4. Install Video Players and Codecs</h4>
+<pre><code>$ sudo dnf install youtube-dl vlc -y
+$ sudo dnf install \
+    gstreamer-plugins-base \
+    gstreamer1-plugins-base \
+    gstreamer-plugins-bad \
+    gstreamer-plugins-ugly \
+    gstreamer1-plugins-ugly \
+    gstreamer-plugins-good-extras \
+    gstreamer1-plugins-good \
+    gstreamer1-plugins-good-extras \
+    gstreamer1-plugins-bad-freeworld \
+    ffmpeg \
+    mpv \
+    gstreamer-ffmpeg
+</code></pre><h4 id="5-themes">5. Themes</h4>
+<pre><code>$ do dnf install numix-gtk-theme
+$ do dnf install paper-icon-theme-1.5.0-4.fc31.noarch
+</code></pre><h4 id="6-gnome-plugins">6. Gnome Plugins</h4>
+<pre><code>$ sudo dnf install gnome-tweak-tool
+</code></pre><ul>
+<li><a href="https://extensions.gnome.org/extension/1160/dash-to-panel/">https://extensions.gnome.org/extension/1160/dash-to-panel/</a></li>
+<li><a href="https://extensions.gnome.org/extension/1112/screenshot-tool/">https://extensions.gnome.org/extension/1112/screenshot-tool/</a></li>
+<li><a href="https://extensions.gnome.org/extension/1503/tray-icons/">https://extensions.gnome.org/extension/1503/tray-icons/</a></li>
+<li><a href="https://extensions.gnome.org/extension/517/caffeine/">https://extensions.gnome.org/extension/517/caffeine/</a></li>
+<li><a href="https://extensions.gnome.org/extension/277/impatience/">https://extensions.gnome.org/extension/277/impatience/</a></li>
+<li><a href="https://extensions.gnome.org/extension/104/netspeed/">https://extensions.gnome.org/extension/104/netspeed/</a></li>
+<li><a href="https://extensions.gnome.org/extension/1034/services-systemd/">https://extensions.gnome.org/extension/1034/services-systemd/</a></li>
+</ul>
+<pre><code>$ sudo dnf install menulibre
+</code></pre><ul>
+<li>Disable Wayland</li>
+</ul>
+<pre><code>cat '/etc/gdm/custom.conf' | grep '#WaylandEnable' &gt; '/dev/null' &amp;&amp; sudo sed -i 's/'#WaylandEnable'/'WaylandEnable'/g' '/etc/gdm/custom.conf' &amp;&amp; cat '/etc/gdm/custom.conf' | grep 'WaylandEnable'
+</code></pre><h4 id="7-misc-apps">7. Misc Apps</h4>
+<pre><code>$ sudo dnf install unzip p7zip p7zip-plugins wget
+</code></pre><ul>
+<li>Fedy Install</li>
+</ul>
+<pre><code># RPM Fusion
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+# Install fedy copr repository
+sudo dnf copr enable kwizart/fedy
+
+# Install fedy
+sudo dnf install fedy -y
+</code></pre><ul>
+<li>Nano Install and updates env variables</li>
+</ul>
+<pre><code>sudo dnf install 'nano' -y &amp;&amp; export 'VISUAL=nano' &amp;&amp; export 'EDITOR=nano' &amp;&amp; echo -e 'export VISUAL=nano\nexport EDITOR=nano' | sudo tee '/etc/profile.d/editor-nano.sh' &gt; '/dev/null' &amp;&amp; cat '/etc/profile.d/editor-nano.sh' &amp;&amp; mkdir -p ~/'.config/nano' &amp;&amp; echo 'set nowrap' | tee ~/'.config/nano/nanorc' &gt; '/dev/null' &amp;&amp; cat ~/'.config/nano/nanorc'
+</code></pre><ul>
+<li>Git Tools</li>
+</ul>
+<pre><code>sudo dnf install git-cola
+</code></pre><h4 id="8-mozilla-firefox-settings">8. Mozilla Firefox Settings</h4>
+<ul>
+<li>Enable hardware Acceleration</li>
+</ul>
+<pre><code>echo -e 'export MOZ_ACCELERATED=1\nexport MOZ_WEBRENDER=1\nexport MOZ_USE_XINPUT2=1' | sudo tee '/etc/profile.d/firefox-hwaccel.sh' &gt; '/dev/null' &amp;&amp; cat '/etc/profile.d/firefox-hwaccel.sh'
+</code></pre><h4 id="sites-information-was-pulled-from">Sites Information was Pulled From</h4>
+<ul>
+<li><a href="https://wiki.realmofespionage.xyz/distros:fedora_workstation_gnome">https://wiki.realmofespionage.xyz/distros:fedora_workstation_gnome</a></li>
+<li><a href="https://ytdl-org.github.io/youtube-dl/download.html">https://ytdl-org.github.io/youtube-dl/download.html</a></li>
+<li><a href="https://www.fossmint.com/best-linux-icon-themes/">https://www.fossmint.com/best-linux-icon-themes/</a></li>
+<li><a href="https://github.com/rpmfusion-infra/fedy">https://github.com/rpmfusion-infra/fedy</a></li>
+</ul>
+
+
+<footer class="footline">
 	
-  
+</footer>
+
         
         </div> 
         
@@ -342,8 +489,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -357,6 +502,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -376,6 +522,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -461,8 +610,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/fedora/" title="Fedoras"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/fedora/" title="Fedoras" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/unraid/" title="Unraids" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
